@@ -1,0 +1,28 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(120deg, #4B0082, #800080);
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-link {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #F3E8FF;
+  }

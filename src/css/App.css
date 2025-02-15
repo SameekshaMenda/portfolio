@@ -161,3 +161,48 @@
   cursor: not-allowed;
 }
 
+.section-heading {
+  @apply text-5xl font-bold mb-4 text-purple-800;
+}
+
+.section-tagline {
+  @apply text-lg text-purple-600 italic mb-10;
+}
+
+/* Add this to your App.css or a separate CSS file */
+.sidebar {
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar a {
+  font-family: 'Lobster', cursive;
+  font-size: 1.2rem;
+}
+
+.sidebar a:hover {
+  background-color: #800080;
+  border-radius: 5px;
+}
+
+.navbar-nav .btn {
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .btn:hover {
+  background-color: #fff09b;
+  color: black;
+}
+.navbar {
+  z-index: 1050;
+}
+.skills-container {
+  background: transparent; /* Removes the white background */
+  box-shadow: none; /* Removes any shadow if applied */
+}
