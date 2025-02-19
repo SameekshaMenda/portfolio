@@ -206,3 +206,7 @@
   background: transparent; /* Removes the white background */
   box-shadow: none; /* Removes any shadow if applied */
 }
+
+/* body {
+  padding-top: 60px;
+} */  /* Adjust based on navbar height */

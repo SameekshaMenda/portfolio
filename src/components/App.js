@@ -16,7 +16,7 @@ import Education from "./education"; // Import education.js file
 import Home from "./Home";
 import Media from "./media";
 import CustomNavbar from "./CustomNavbar";
-import Projects from "./Projects";
+import Projects from "./Project2";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 // <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

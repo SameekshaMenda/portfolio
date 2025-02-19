@@ -55,7 +55,8 @@ const Education = () => {
         style={{
           backgroundColor: "#F3E8FF", // Pink background
           position: "relative",
-          paddingTop: "160px", // Increased space to ensure title visibility
+          paddingTop: "160px",
+          fontFamily: "'Poppins', sans-serif", // Increased space to ensure title visibility
         }}
       >
         {/* Curvy Top for Education Section */}
@@ -80,7 +81,7 @@ const Education = () => {
         <div className="container">
           {/* Title with animation */}
           <p
-            className="text-7xl font-bold text-transparent bg-clip-text mb-40"
+            className="text-6xl font-bold text-transparent bg-clip-text mb-40"
             style={{
               backgroundImage: 'linear-gradient(120deg, #4B0082, #800080)',
               animation: 'glitter 1.5s infinite linear',

@@ -95,10 +95,11 @@ function Contact() {
       <div className="container mx-auto px-6">
         <div className="text-left mb-10">
           <p
-            className="text-7xl font-bold text-transparent bg-clip-text mb-4"
+            className="text-6xl font-bold text-transparent bg-clip-text mb-4"
             style={{
               backgroundImage: 'linear-gradient(120deg, #4B0082, #800080)',
               animation: 'glitter 1.5s infinite linear',
+              fontFamily: "'Poppins', sans-serif",
             }}
             data-aos="slide-in"
             data-aos-delay="100"

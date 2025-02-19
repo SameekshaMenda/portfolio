@@ -40,7 +40,7 @@ const Home = () => {
     >
       {/* Hero Section */}
       <header
-        className="d-flex align-items-center justify-content-between px-5"
+        className="container-fluid d-flex align-items-center justify-content-center px-4"
         id="home"
         style={{
           height: "100vh", // Full viewport height
@@ -50,41 +50,44 @@ const Home = () => {
           margin: 0, // Reset margin
         }}
       >
-        <div className="text-container" data-aos="fade-right">
-          <h1 className="display-4 font-weight-bold mb-3" style={{ margin: 0 }}>
-            Hi, I'm <span style={{ color: "#fff09b" }}>Sameeksha Menda</span>
-          </h1>
-          <p className="lead mb-4" style={{ margin: 0 }}>
-            Frontend Developer | Creative Thinker | Tech Enthusiast
-          </p>
-          <div>
-            <a
-              href="https://github.com/SameekshaMenda"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline-light mx-2"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline-light mx-2"
-            >
-              LinkedIn
-            </a>
+        <div className="row w-100 align-items-center text-center text-md-start">
+          {/* Text Content */}
+          <div className="col-12 col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+            <h1 className="display-4 font-weight-bold mb-3">
+              Hi, I'm <span style={{ color: "#fff09b" }}>Sameeksha Menda</span>
+            </h1>
+            <p className="lead mb-4">
+              Frontend Developer | Creative Thinker | Tech Enthusiast
+            </p>
+            <div>
+              <a
+                href="https://github.com/SameekshaMenda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-light mx-2"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-light mx-2"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* Lottie Animation */}
-        <div className="animation-container" data-aos="fade-left">
-          <Player
-            autoplay
-            loop
-            src={animationData}
-            style={{ height: "400px", width: "400px" }}
-          />
+          {/* Lottie Animation */}
+          <div className="col-12 col-md-6 d-flex justify-content-center" data-aos="fade-left">
+            <Player
+              autoplay
+              loop
+              src={animationData}
+              style={{ height: "100%", maxWidth: "400px", width: "100%" }}
+            />
+          </div>
         </div>
       </header>
     </div>
