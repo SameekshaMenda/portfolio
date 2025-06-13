@@ -74,7 +74,7 @@ const menuButtonStyle = {
 const overlayStyle = {
   position: "fixed",
   inset: 0, // Covers the full screen properly
-  background: "rgba(0, 0, 0, 0.7)", // Dark semi-transparent background
+  background: "rgba(75, 0, 130, 0.5)", // Dark semi-transparent background
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

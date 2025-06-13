@@ -40,7 +40,7 @@ const Home = () => {
     >
       {/* Hero Section */}
       <header
-        className="container-fluid d-flex align-items-center justify-content-center px-4"
+        className="container-fluid d-flex align-items-center px-4"
         id="home"
         style={{
           height: "100vh", // Full viewport height
@@ -50,9 +50,9 @@ const Home = () => {
           margin: 0, // Reset margin
         }}
       >
-        <div className="row w-100 align-items-center text-center text-md-start">
+        <div className="row w-100 align-items-center">
           {/* Text Content */}
-          <div className="col-12 col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+          <div className="col-12 col-md-6 text-center text-md-start" data-aos="fade-right">
             <h1 className="display-4 font-weight-bold mb-3">
               Hi, I'm <span style={{ color: "#fff09b" }}>Sameeksha Menda</span>
             </h1>
@@ -79,8 +79,8 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Lottie Animation */}
-          <div className="col-12 col-md-6 d-flex justify-content-center" data-aos="fade-left">
+          {/* Lottie Animation - Moves to the right */}
+          <div className="col-12 col-md-6 d-flex justify-content-md-end justify-content-center" data-aos="fade-left">
             <Player
               autoplay
               loop

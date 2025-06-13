@@ -79,21 +79,32 @@ const Education = () => {
         </svg>
 
         <div className="container">
-          {/* Title with animation */}
+                <p
+                    className="text-6xl font-bold text-transparent mb-4"
+                    style={{
+                        backgroundImage: 'linear-gradient(120deg, #4B0082, #800080)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        animation: 'glitter 1.5s infinite linear',
+                        fontFamily: "'Poppins', sans-serif",
+                        // display: "inline-block", //gives gradient effect
+                        wordSpacing: '4px',
+                        letterSpacing: "1px",
+                        lineHeight: "1.2" // Increase spacing between lines to solve y problem
+                    
+                    }}
+                >
+                    My Education
+                </p>
           <p
-            className="text-6xl font-bold text-transparent bg-clip-text mb-40"
-            style={{
-              backgroundImage: 'linear-gradient(120deg, #4B0082, #800080)',
-              animation: 'glitter 1.5s infinite linear',
-              marginBottom: "70px", // Added spacing below the heading
-            }}
-            data-aos="fade-up"
-            data-aos-delay="100"
-            data-aos-duration="1000"
-            data-aos-easing="ease-out"
-          >
-            Education
-          </p>
+                    className="text-lg text-purple-600 italic mb-10"
+                    style={{
+                        fontFamily: "'Lobster', cursive",
+                        fontSize: "1.5rem",
+                    }}
+                >
+                    Academic Journey
+                </p>
 
 
           {/* Tagline */}
@@ -146,6 +157,7 @@ const Education = () => {
                 <p className="edu-description" style={{ color: "#4B0082", fontSize: "1.1rem" }}>
                   Currently pursuing 3rd Year of My Undergraduate degree in CSE - Data Science.
                 </p>
+
               </div>
             </div>
             <div
@@ -166,7 +178,7 @@ const Education = () => {
                   2020 - 2022
                 </p>
                 <p className="edu-description" style={{ color: "#4B0082", fontSize: "1.1rem" }}>
-                  Majored in Science related to Biology.
+                Completed Pre-University education with a focus on Science (PCMB).
                 </p>
               </div>
             </div>
@@ -188,7 +200,7 @@ const Education = () => {
                   2011 - 2020
                 </p>
                 <p className="edu-description" style={{ color: "#4B0082", fontSize: "1.1rem" }}>
-                  Studied here.
+                Completed my schooling.
                 </p>
               </div>
             </div>

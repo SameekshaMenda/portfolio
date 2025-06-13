@@ -13,11 +13,17 @@ const projectsData = [
     image: "/smartcity.png",
     repoLink: "https://github.com/SameekshaMenda/smart-complaint-system",
   },
+  // {
+  //   title: "Honey-bee Anomaly Detection",
+  //   types: ["Streamlit", "Machine Learning"],
+  //   image: "/bee1.png",
+  //   repoLink: "https://github.com/SameekshaMenda/bee_hive_miniproject",
+  // },
   {
-    title: "Honey-bee Anomaly Detection",
-    types: ["Streamlit", "Machine Learning"],
-    image: "/bee1.png",
-    repoLink: "https://github.com/SameekshaMenda/bee_hive_miniproject",
+    title: "Zero-Trust Secure Web Application",
+    types: ["Python", "Cryptography"],
+    image: "/scannerSC.png",
+    repoLink: "https://github.com/SameekshaMenda/Zero_trust_security.git",
   },
 ];
 
@@ -59,7 +65,7 @@ const Projects = () => {
             fontSize: "1.5rem",
           }}
         >
-          Skills are the keys to unlocking your future!
+          Projects that I have worked on
         </p>
 
         <div className="row">

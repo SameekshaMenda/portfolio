@@ -91,7 +91,7 @@ function ContactForm() {
 
 function Contact() {
   return (
-    <section id="contact" className="bg-purple-100 relative py-20 mb-24">
+    <section id="contact" className="bg-purple-100 relative py-10 mb-0">
       <div className="container mx-auto px-6">
         <div className="text-left mb-10">
           <p
@@ -119,7 +119,8 @@ function Contact() {
 
         <div className="flex flex-col md:flex-row items-center justify-between py-20 px-12 gap-10">
           {/* Lottie Animation - Slightly Shifted Left */}
-          <div className="w-full md:w-1/2 flex justify-center ml-[-100px]">
+          <div className="w-full md:w-1/2 flex justify-center">
+
             <Player
               autoplay
               loop
