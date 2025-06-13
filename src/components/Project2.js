@@ -33,7 +33,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <section className="bg-purple-100 py-20">
+    <section id="projects" className="bg-purple-100 py-20">
       <div className="container mx-auto px-6">
         {/* Left-Aligned Title - Fully to the Left */}
         <div className="text-left mb-10">

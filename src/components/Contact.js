@@ -91,7 +91,7 @@ function ContactForm() {
 
 function Contact() {
   return (
-    <section id="contact" className="bg-purple-100 relative py-10 mb-0">
+    <section id="contactme" className="bg-purple-100 relative py-10 mb-0">
       <div className="container mx-auto px-6">
         <div className="text-left mb-10">
           <p

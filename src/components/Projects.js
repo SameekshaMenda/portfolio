@@ -30,7 +30,7 @@ const projectsData = [
 const Projects = () => {
   return (
     <section
-      id="skills"
+      id="projects"
       style={{
         backgroundColor: "#F3E8FF",
         position: "relative",
