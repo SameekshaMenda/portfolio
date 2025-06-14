@@ -54,11 +54,11 @@ const SkillsSection = () => {
                     style={{
                   fontSize: "1.5rem",
                   color: "#4B0082",
-                  fontFamily: "'Roboto', sans-serif",
+                  
                   fontWeight: "500"
                 }}
                 >
-                    Skills I Have Gained Over Time!
+                    Skills I Have Gained Over Time!!
                 </p>
 
                 {/* Skill Icons */}

@@ -114,7 +114,7 @@ function Contact() {
             style={{
                   fontSize: "1.5rem",
                   color: "#4B0082",
-                  fontFamily: "'Roboto', sans-serif",
+                  
                   fontWeight: "500"
                 }}
           >
