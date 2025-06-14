@@ -49,8 +49,8 @@ const SkillsSection = () => {
                     My Skills
                 </h1>
 
-                <h2
-                    className="text-xl md:text-2xl mb-8 md:mb-12"
+                <p
+                    className="text-base md:text-lg mb-6 md:mb-10"
                     style={{
                   fontSize: "1.5rem",
                   color: "#4B0082",
@@ -59,7 +59,7 @@ const SkillsSection = () => {
                 }}
                 >
                     Skills I Have Gained Over Time!
-                </h2>
+                </p>
 
                 {/* Skill Icons */}
                 <div className="space-y-12">

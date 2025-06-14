@@ -1,4 +1,4 @@
-import React, { useState,useRef,useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -33,13 +33,18 @@ const CustomNavbar = () => {
     <>
       {/* Floating Menu Button */}
       <div style={menuButtonStyle} onClick={() => setMenuOpen(true)}>
-        <FaBars size={28} color="white" />
+        <FaBars size="clamp(24px, 3vw, 28px)" color="white" />
       </div>
      
       {/* Full-Screen Overlay Menu */}
       {menuOpen && (
-        <div style={overlayStyle}>
-          <FaTimes size={32} color="white" style={closeButtonStyle} onClick={() => setMenuOpen(false)} />
+        <div style={overlayStyle} ref={menuRef}>
+          <FaTimes 
+            size="clamp(28px, 4vw, 32px)" 
+            color="white" 
+            style={closeButtonStyle} 
+            onClick={() => setMenuOpen(false)} 
+          />
           <Nav className="flex-column text-center">
             {["Home", "Education", "Skills", "Projects", "Contact Me"].map((item, index) => (
               <Nav.Link
@@ -61,20 +66,23 @@ const CustomNavbar = () => {
 // Styles
 const menuButtonStyle = {
   position: "fixed",
-  top: "10px",
-  left: "10px",
+  top: "clamp(10px, 2vw, 20px)",
+  left: "clamp(10px, 2vw, 20px)",
   zIndex: 1050,
   cursor: "pointer",
-  background: "rgba(75, 0, 130, 0.8)", // Purple-themed button
-  padding: "12px",
+  background: "rgba(75, 0, 130, 0.8)",
+  padding: "clamp(10px, 1.5vw, 12px)",
   borderRadius: "50%",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
 };
 
 const overlayStyle = {
   position: "fixed",
-  inset: 0, // Covers the full screen properly
-  background: "rgba(75, 0, 130, 0.5)", // Dark semi-transparent background
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  background: "rgba(75, 0, 130, 0.5)",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -85,18 +93,19 @@ const overlayStyle = {
 
 const closeButtonStyle = {
   position: "absolute",
-  top: "20px",
-  right: "20px",
+  top: "clamp(15px, 3vw, 20px)",
+  right: "clamp(15px, 3vw, 20px)",
   cursor: "pointer",
 };
 
 const navLinkStyle = {
   color: "white",
-  fontSize: "2rem",
+  fontSize: "clamp(1.5rem, 5vw, 2rem)",
   fontWeight: "bold",
   textDecoration: "none",
-  margin: "15px 0",
+  margin: "clamp(10px, 2vw, 15px) 0",
   transition: "color 0.3s",
+  padding: "clamp(5px, 1vw, 10px)",
 };
 
 export default CustomNavbar;

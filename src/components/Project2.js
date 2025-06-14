@@ -55,7 +55,7 @@ const Projects = () => {
           </p>
 
           <p
-            className="text-lg text-purple-600 mb-12 text-left"
+            className="text-base md:text-lg mb-6 md:mb-10"
             style={{
                   fontSize: "1.5rem",
                   color: "#4B0082",
