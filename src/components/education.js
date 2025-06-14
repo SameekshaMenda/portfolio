@@ -1,35 +1,30 @@
 import React, { useEffect } from 'react';
-import { Player } from '@lottiefiles/react-lottie-player'; // Import Lottie Player
-import animationData from "../developer.json";  // Replace with your animation file path
-import '../css/App.css';
 import AOS from 'aos';
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'aos/dist/aos.css'; // Import AOS styles
-import 'font-awesome/css/font-awesome.min.css';
+import 'aos/dist/aos.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Education = () => {
   useEffect(() => {
-    // Initialize AOS on page load
     AOS.init({
-      duration: 1000, // Animation duration
-      easing: 'ease-out', // Smooth easing
-      once: false, // Keeps the animation triggered every time the section is viewed
-      offset: 200, // Trigger animation earlier
+      duration: 1000,
+      easing: 'ease-out',
+      once: false,
+      offset: 200,
     });
-
-    // Reset AOS animations on route change (for repeated effects)
     AOS.refresh();
 
     return () => {
-      // Clean up AOS on unmount
       AOS.refresh();
     };
   }, []);
 
   return (
-    <div className="App" style={{ backgroundColor: "#F3E8FF", color: "#4B0082" }}>
-
+    <div className="App" style={{ 
+      backgroundColor: "#F3E8FF", 
+      color: "#4B0082",
+      fontFamily: "'Poppins', sans-serif"
+    }}>
       {/* Curvy Bottom for Home Section */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -53,10 +48,9 @@ const Education = () => {
         id="education"
         className="py-16 text-left"
         style={{
-          backgroundColor: "#F3E8FF", // Pink background
+          backgroundColor: "#F3E8FF",
           position: "relative",
           paddingTop: "160px",
-          fontFamily: "'Poppins', sans-serif", // Increased space to ensure title visibility
         }}
       >
         {/* Curvy Top for Education Section */}
@@ -78,130 +72,238 @@ const Education = () => {
           />
         </svg>
 
-        <div className="container">
-                <p
-                    className="text-6xl font-bold text-transparent mb-4"
-                    style={{
-                        backgroundImage: 'linear-gradient(120deg, #4B0082, #800080)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        animation: 'glitter 1.5s infinite linear',
-                        fontFamily: "'Poppins', sans-serif",
-                        // display: "inline-block", //gives gradient effect
-                        wordSpacing: '4px',
-                        letterSpacing: "1px",
-                        lineHeight: "1.2" // Increase spacing between lines to solve y problem
+        <div className="container px-3">
+          <div className="row">
+            <div className="col-12">
+              <h1
+                className="text-4xl md:text-6xl font-bold mb-4"
+                style={{
+                  backgroundImage: 'linear-gradient(120deg, #4B0082, #800080)',
+                  backgroundClip: 'text',
+                  WebkitBackgroundClip: 'text',
+                  color: 'transparent',
+                  wordSpacing: '4px',
+                  letterSpacing: "1px",
+                  lineHeight: "1.2",
+                }}
+              >
+                My Education
+              </h1>
+              <h2
+                className="text-lg mb-10"
+                style={{
+                  fontSize: "1.5rem",
+                  color: "#4B0082",
+                  fontWeight: "500"
+                }}
+              >
+                Academic Journey
+              </h2>
+            </div>
+          </div>
+
+          {/* Timeline */}
+          <div className="row">
+            <div className="col-12">
+              <div style={{
+                position: "relative",
+                paddingLeft: "30px"
+              }}>
+                {/* Timeline line */}
+                <div style={{
+                  position: "absolute",
+                  left: "15px",
+                  top: 0,
+                  bottom: 0,
+                  width: "2px",
+                  background: "linear-gradient(to bottom, #4B0082, #800080)"
+                }}></div>
+                
+                {/* Timeline Item 1 */}
+                <div
+                  className="mb-5"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  style={{
+                    position: "relative",
+                    paddingLeft: "20px"
+                  }}
+                >
+                  <div style={{
+                    background: "rgba(255, 255, 255, 0.8)",
+                    borderRadius: "8px",
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                    padding: "1.5rem",
+                    position: "relative"
+                  }}>
+                    {/* Timeline dot */}
+                    <div style={{
+                      position: "absolute",
+                      left: "-28px",
+                      top: "24px",
+                      width: "16px",
+                      height: "16px",
+                      borderRadius: "50%",
+                      background: "#4B0082",
+                      border: "2px solid #800080"
+                    }}></div>
                     
-                    }}
-                >
-                    My Education
-                </p>
-          <p
-                    className="text-lg text-purple-600 italic mb-10"
-                    style={{
-                        fontFamily: "'Lobster', cursive",
+                    <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                      <i className="fas fa-graduation-cap" style={{
                         fontSize: "1.5rem",
-                    }}
+                        color: "#800080",
+                        marginRight: "10px"
+                      }}></i>
+                      <h3 style={{
+                        color: "#4B0082",
+                        fontSize: "1.25rem",
+                        fontWeight: "bold",
+                        margin: 0
+                      }}>
+                        Sahyadri College of Engineering and Management
+                      </h3>
+                    </div>
+                    <p style={{
+                      color: "#800080",
+                      fontSize: "1rem",
+                      fontWeight: "500",
+                      marginBottom: "0.5rem"
+                    }}>
+                      2022 - Present
+                    </p>
+                    <p style={{
+                      color: "#4B0082",
+                      fontSize: "0.9rem",
+                      margin: 0
+                    }}>
+                      Currently pursuing 3rd Year of My Undergraduate degree in CSE - Data Science.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Timeline Item 2 */}
+                <div
+                  className="mb-5"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  style={{
+                    position: "relative",
+                    paddingLeft: "20px"
+                  }}
                 >
-                    Academic Journey
-                </p>
-
-
-          {/* Tagline */}
-          {/* <p
-            className="text-lg mb-10"
-            style={{
-              fontFamily: "'Pacifico', cursive", // A more elegant and playful font
-              fontSize: "2rem", // Slightly larger for emphasis
-              color: "#800080", // A deeper purple for contrast
-              textAlign: "center", // Center-aligned for better balance
-              marginTop: "20px", // Added space above the tagline
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow for depth
-            }}
-          >
-            "Empowering the future through continuous learning and innovation."
-          </p> */}
-
-          {/* Divider */}
-          {/* <div
-            style={{
-              width: "100px",
-              height: "4px",
-              background: "linear-gradient(90deg, #4B0082, #800080)",
-              margin: "40px auto",
-              borderRadius: "2px",
-            }}
-            data-aos="fade-up"
-            data-aos-delay="200"
-          ></div> */}
-
-          {/* Timeline with Simple Line and Content */}
-          <div className="timeline">
-            <div
-              className="timeline-item"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="1500"
-              data-aos-offset="200"
-            >
-              <div className="timeline-content">
-                <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <i className="fas fa-graduation-cap" style={{ fontSize: "2rem", color: "#800080", marginRight: "10px" }}></i>
-                  <h5 className="edu-institute" style={{ color: "#4B0082", fontSize: "1.75rem", fontWeight: "bold" }}>
-                    Sahyadri College of Engineering and Management
-                  </h5>
+                  <div style={{
+                    background: "rgba(255, 255, 255, 0.8)",
+                    borderRadius: "8px",
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                    padding: "1.5rem",
+                    position: "relative"
+                  }}>
+                    {/* Timeline dot */}
+                    <div style={{
+                      position: "absolute",
+                      left: "-28px",
+                      top: "24px",
+                      width: "16px",
+                      height: "16px",
+                      borderRadius: "50%",
+                      background: "#4B0082",
+                      border: "2px solid #800080"
+                    }}></div>
+                    
+                    <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                      <i className="fas fa-book" style={{
+                        fontSize: "1.5rem",
+                        color: "#800080",
+                        marginRight: "10px"
+                      }}></i>
+                      <h3 style={{
+                        color: "#4B0082",
+                        fontSize: "1.25rem",
+                        fontWeight: "bold",
+                        margin: 0
+                      }}>
+                        St. Agnes P.U College, Mangaluru
+                      </h3>
+                    </div>
+                    <p style={{
+                      color: "#800080",
+                      fontSize: "1rem",
+                      fontWeight: "500",
+                      marginBottom: "0.5rem"
+                    }}>
+                      2020 - 2022
+                    </p>
+                    <p style={{
+                      color: "#4B0082",
+                      fontSize: "0.9rem",
+                      margin: 0
+                    }}>
+                      Completed Pre-University education with a focus on Science (PCMB).
+                    </p>
+                  </div>
                 </div>
-                <p className="edu-duration" style={{ color: "#800080", fontSize: "1.25rem", fontWeight: "500" }}>
-                  2022 - Present
-                </p>
-                <p className="edu-description" style={{ color: "#4B0082", fontSize: "1.1rem" }}>
-                  Currently pursuing 3rd Year of My Undergraduate degree in CSE - Data Science.
-                </p>
-
-              </div>
-            </div>
-            <div
-              className="timeline-item"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-duration="1500"
-              data-aos-offset="200"
-            >
-              <div className="timeline-content">
-                <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <i className="fas fa-book" style={{ fontSize: "2rem", color: "#800080", marginRight: "10px" }}></i>
-                  <h5 className="edu-institute" style={{ color: "#4B0082", fontSize: "1.75rem", fontWeight: "bold" }}>
-                    St. Agnes P.U College, Mangaluru
-                  </h5>
+                
+                {/* Timeline Item 3 */}
+                <div
+                  className="mb-5"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  style={{
+                    position: "relative",
+                    paddingLeft: "20px"
+                  }}
+                >
+                  <div style={{
+                    background: "rgba(255, 255, 255, 0.8)",
+                    borderRadius: "8px",
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                    padding: "1.5rem",
+                    position: "relative"
+                  }}>
+                    {/* Timeline dot */}
+                    <div style={{
+                      position: "absolute",
+                      left: "-28px",
+                      top: "24px",
+                      width: "16px",
+                      height: "16px",
+                      borderRadius: "50%",
+                      background: "#4B0082",
+                      border: "2px solid #800080"
+                    }}></div>
+                    
+                    <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                      <i className="fas fa-school" style={{
+                        fontSize: "1.5rem",
+                        color: "#800080",
+                        marginRight: "10px"
+                      }}></i>
+                      <h3 style={{
+                        color: "#4B0082",
+                        fontSize: "1.25rem",
+                        fontWeight: "bold",
+                        margin: 0
+                      }}>
+                        Sri Ramakrishna School, Mangaluru
+                      </h3>
+                    </div>
+                    <p style={{
+                      color: "#800080",
+                      fontSize: "1rem",
+                      fontWeight: "500",
+                      marginBottom: "0.5rem"
+                    }}>
+                      2011 - 2020
+                    </p>
+                    <p style={{
+                      color: "#4B0082",
+                      fontSize: "0.9rem",
+                      margin: 0
+                    }}>
+                      Completed my schooling.
+                    </p>
+                  </div>
                 </div>
-                <p className="edu-duration" style={{ color: "#800080", fontSize: "1.25rem", fontWeight: "500" }}>
-                  2020 - 2022
-                </p>
-                <p className="edu-description" style={{ color: "#4B0082", fontSize: "1.1rem" }}>
-                Completed Pre-University education with a focus on Science (PCMB).
-                </p>
-              </div>
-            </div>
-            <div
-              className="timeline-item"
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-duration="1500"
-              data-aos-offset="200"
-            >
-              <div className="timeline-content">
-                <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <i className="fas fa-school" style={{ fontSize: "2rem", color: "#800080", marginRight: "10px" }}></i>
-                  <h5 className="edu-institute" style={{ color: "#4B0082", fontSize: "1.75rem", fontWeight: "bold" }}>
-                    Sri Ramakrishna School, Mangaluru
-                  </h5>
-                </div>
-                <p className="edu-duration" style={{ color: "#800080", fontSize: "1.25rem", fontWeight: "500" }}>
-                  2011 - 2020
-                </p>
-                <p className="edu-description" style={{ color: "#4B0082", fontSize: "1.1rem" }}>
-                Completed my schooling.
-                </p>
               </div>
             </div>
           </div>

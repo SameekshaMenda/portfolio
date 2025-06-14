@@ -211,3 +211,14 @@
   padding-top: 60px;
 } */  /* Adjust based on navbar height */
 
+/* Ensure Poppins font is loaded */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Optional: Add hover effects */
+.skill-icon {
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}

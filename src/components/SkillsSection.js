@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/App.css";
-
 import {
     FaHtml5,
     FaCss3Alt,
@@ -13,17 +12,8 @@ import {
     FaJava,
     FaFigma,
 } from "react-icons/fa";
-import { SiCplusplus, SiTailwindcss } from "react-icons/si"; // Add SiTailwindcss
+import { SiCplusplus, SiTailwindcss, SiMysql, SiMongodb, SiPostman, SiVisualstudiocode } from "react-icons/si";
 
-//import { SiCplusplus } from "react-icons/si";
-
-// Import the custom icons
-import CIcon from "../icons/c icon.png";
-import postman from "../icons/postman.png";
-import vscode from "../icons/vscode.png";
-import mysql from "../icons/mysql.png";
-import mongodb from "../icons/mongodb.png";
-import tailwind from "../icons/tailwind.png";
 const SkillsSection = () => {
     return (
         <section
@@ -31,122 +21,105 @@ const SkillsSection = () => {
             style={{
                 backgroundColor: "#F3E8FF",
                 position: "relative",
-                paddingTop: "80px",
-                paddingBottom: "80px",
+                padding: "80px 0",
+                fontFamily: "'Poppins', sans-serif"
             }}
         >
-            <div className="container">
-                <p
-                    className="text-6xl font-bold text-transparent mb-4"
+            <div className="container px-4">
+                <h1
+                    className="text-4xl md:text-6xl font-bold mb-4"
                     style={{
                         backgroundImage: 'linear-gradient(120deg, #4B0082, #800080)',
                         backgroundClip: 'text',
                         WebkitBackgroundClip: 'text',
-                        animation: 'glitter 1.5s infinite linear',
-                        fontFamily: "'Poppins', sans-serif",
-                        // display: "inline-block", //gives gradient effect
+                        color: 'transparent',
                         wordSpacing: '4px',
                         letterSpacing: "1px",
-                        lineHeight: "1.2" // Increase spacing between lines to solve y problem
-                    
+                        lineHeight: "1.2"
                     }}
                 >
                     My Skills
-                </p>
+                </h1>
 
-
-                <p
-                    className="text-lg text-purple-600 italic mb-10"
+                <h2
+                    className="text-xl md:text-2xl mb-10"
                     style={{
-                        fontFamily: "'Lobster', cursive",
-                        fontSize: "1.5rem",
+                        color: "#4B0082",
+                        fontWeight: "500"
                     }}
                 >
-                    Skills I Have Gained Over Time!!
-                </p>
+                    Skills I Have Gained Over Time
+                </h2>
 
-                {/* Skill Icons */}
-                <div className="skills-section py-12 px-6">
-                   {/* Section: Languages */}
-<div className="mb-12">
-    <h2 className="text-3xl font-bold text-purple-900 mb-8" style={{ fontFamily: "'Lobster', cursive" }}>
-        LANGUAGES
-    </h2>
-    <div className="flex flex-wrap items-center gap-6">
-        {[
-            { icon: <FaHtml5 className="text-orange-600 text-5xl" /> },
-            { icon: <FaCss3Alt className="text-blue-600 text-5xl" /> },
-            { icon: <FaJsSquare className="text-yellow-400 text-5xl" /> },
-            { icon: <FaJava className="text-blue-700 text-5xl" /> },
-            { icon: <FaPython className="text-blue-500 text-5xl" /> },
-            { icon: <img src={CIcon} alt="C" className="w-12 h-12" /> },
-            { icon: <SiCplusplus className="text-blue-800 text-5xl" /> },
-        ].map((item, index) => (
-            <div key={index} className="flex items-center">
-                {item.icon}
-            </div>
-        ))}
-    </div>
-</div>
+                {/* Skill Categories */}
+                <div className="space-y-12">
+                    {/* Languages */}
+                    <div>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#4B0082" }}>
+                            Languages
+                        </h3>
+                        <div className="flex flex-wrap gap-8 justify-center md:justify-start">
+                            <SkillIcon icon={<FaHtml5 />} color="text-orange-600" name="HTML5" />
+                            <SkillIcon icon={<FaCss3Alt />} color="text-blue-600" name="CSS3" />
+                            <SkillIcon icon={<FaJsSquare />} color="text-yellow-400" name="JavaScript" />
+                            <SkillIcon icon={<FaJava />} color="text-blue-700" name="Java" />
+                            <SkillIcon icon={<FaPython />} color="text-blue-500" name="Python" />
+                            <SkillIcon icon={<SiCplusplus />} color="text-blue-800" name="C++" />
+                        </div>
+                    </div>
 
-{/* Libraries & Frameworks */}
-<div className="mb-12">
-    <h2 className="text-3xl font-bold text-purple-900 mb-6" style={{ fontFamily: "'Lobster', cursive" }}>
-        LIBRARIES & FRAMEWORKS
-    </h2>
-    <div className="flex flex-wrap items-center gap-6">
-        {[
-            { icon: <FaReact className="text-cyan-400 text-5xl" /> },
-            { icon: <FaBootstrap className="text-purple-700 text-5xl" /> },
-            { icon: <FaNodeJs className="text-green-600 text-5xl" /> },
-            { icon: <SiTailwindcss className="text-blue-500 text-5xl" /> },
-        ].map((item, index) => (
-            <div key={index} className="flex items-center">
-                {item.icon}
-            </div>
-        ))}
-    </div>
-</div>
+                    {/* Libraries & Frameworks */}
+                    <div>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#4B0082" }}>
+                            Libraries & Frameworks
+                        </h3>
+                        <div className="flex flex-wrap gap-8 justify-center md:justify-start">
+                            <SkillIcon icon={<FaReact />} color="text-cyan-400" name="React" />
+                            <SkillIcon icon={<FaBootstrap />} color="text-purple-700" name="Bootstrap" />
+                            <SkillIcon icon={<FaNodeJs />} color="text-green-600" name="Node.js" />
+                            <SkillIcon icon={<SiTailwindcss />} color="text-blue-500" name="Tailwind CSS" />
+                        </div>
+                    </div>
 
-{/* Databases */}
-<div className="mb-12">
-    <h2 className="text-3xl font-bold text-purple-900 mb-6" style={{ fontFamily: "'Lobster', cursive" }}>
-        DATABASES
-    </h2>
-    <div className="flex flex-wrap items-center gap-6">
-        {[
-            { icon: <img src={mysql} alt="MySQL" className="w-12 h-12" /> },
-            { icon: <img src={mongodb} alt="MongoDB" className="w-12 h-12" /> },
-        ].map((item, index) => (
-            <div key={index} className="flex items-center">
-                {item.icon}
-            </div>
-        ))}
-    </div>
-</div>
+                    {/* Databases */}
+                    <div>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#4B0082" }}>
+                            Databases
+                        </h3>
+                        <div className="flex flex-wrap gap-8 justify-center md:justify-start">
+                            <SkillIcon icon={<SiMysql />} color="text-blue-600" name="MySQL" />
+                            <SkillIcon icon={<SiMongodb />} color="text-green-600" name="MongoDB" />
+                        </div>
+                    </div>
 
-{/* Tools */}
-<div>
-    <h2 className="text-3xl font-bold text-purple-900 mb-6" style={{ fontFamily: "'Lobster', cursive" }}>
-        TOOLS
-    </h2>
-    <div className="flex flex-wrap items-center gap-6">
-        {[
-            { icon: <FaGit className="text-red-600 text-5xl" /> },
-            { icon: <img src={vscode} alt="VS Code" className="w-12 h-12" /> },
-            { icon: <img src={postman} alt="Postman" className="w-12 h-12" /> },
-            { icon: <FaFigma className="text-purple-500 text-5xl" /> },
-        ].map((item, index) => (
-            <div key={index} className="flex items-center">
-                {item.icon}
-            </div>
-        ))}
-    </div>
-</div>
-
+                    {/* Tools */}
+                    <div>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#4B0082" }}>
+                            Tools
+                        </h3>
+                        <div className="flex flex-wrap gap-8 justify-center md:justify-start">
+                            <SkillIcon icon={<FaGit />} color="text-red-600" name="Git" />
+                            <SkillIcon icon={<SiVisualstudiocode />} color="text-blue-600" name="VS Code" />
+                            <SkillIcon icon={<SiPostman />} color="text-orange-600" name="Postman" />
+                            <SkillIcon icon={<FaFigma />} color="text-purple-500" name="Figma" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+    );
+};
+
+const SkillIcon = ({ icon, color, name }) => {
+    return (
+        <div className="flex flex-col items-center w-20 md:w-24">
+            <div className={`text-4xl md:text-5xl mb-2 ${color}`}>
+                {icon}
+            </div>
+            <span className="text-sm md:text-base text-center text-purple-900 font-medium">
+                {name}
+            </span>
+        </div>
     );
 };
 
