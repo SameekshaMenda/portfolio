@@ -222,3 +222,22 @@
 .skill-icon:hover {
   transform: scale(1.1);
 }
+
+/* Ensure Poppins font is loaded */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+/* Optional: Add hover effects */
+.skill-item {
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+/* Make sure images maintain aspect ratio */
+.skill-item img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}

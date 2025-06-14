@@ -55,11 +55,13 @@ const Projects = () => {
           </p>
 
           <p
-            className="text-lg text-purple-600 italic mb-12 text-left"
+            className="text-lg text-purple-600 mb-12 text-left"
             style={{
-              fontFamily: "'Lobster', cursive",
-              fontSize: "1.5rem",
-            }}
+                  fontSize: "1.5rem",
+                  color: "#4B0082",
+                  fontFamily: "'Roboto', sans-serif",
+                  fontWeight: "500"
+                }}
           >
             A collection of projects that reflect my skills!!
           </p>

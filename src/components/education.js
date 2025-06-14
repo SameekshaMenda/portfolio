@@ -89,16 +89,17 @@ const Education = () => {
               >
                 My Education
               </h1>
-              <h2
-                className="text-lg mb-10"
+              <p
+                className="text-lg  mb-10"
                 style={{
                   fontSize: "1.5rem",
                   color: "#4B0082",
+                  fontFamily: "'Roboto', sans-serif",
                   fontWeight: "500"
                 }}
               >
                 Academic Journey
-              </h2>
+              </p>
             </div>
           </div>
 
