@@ -69,7 +69,7 @@ const Home = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/sameeksha-menda-9a863426a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-light mx-2"
